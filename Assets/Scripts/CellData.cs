@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class CellData : MonoBehaviour
 {
+    public bool dark = false;
+    public bool LightSwitch = false;
+    public bool CharIsIn = false;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        if(dark == true)
+        {
+            renderer.enabled = false;
+        }
     }
 
     // Update is called once per frame
