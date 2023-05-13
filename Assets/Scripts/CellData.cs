@@ -72,24 +72,24 @@ public class CellData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dark == true)
-        {
-            sR.sprite = darkSprite;
-        }
-
-        if(dark == false)
-        {
-            sR.sprite = lightSprite;
-        }
-
-        if(lightSwitch == true && switchOn == false)
+        if(lightSwitch && !switchOn)
         {
             sR.sprite = lightSwitchOnSprite;  
         }
 
-        if(lightSwitch == true && switchOn == true)
+        else if(lightSwitch && switchOn)
         {
             sR.sprite = lightSwitchOffSprite;  
         }
+        else if(dark)
+        {
+            sR.sprite = darkSprite;
+        }
+        else if(!dark)
+        {
+            sR.sprite = lightSprite;
+        }
+
+        
     }
 }
