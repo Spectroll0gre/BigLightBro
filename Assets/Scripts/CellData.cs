@@ -17,6 +17,8 @@ public class CellData : MonoBehaviour
     public TimerUi timerUI;
     private SpriteRenderer sR;
     public int FuckUp = 1;
+    public bool startBox;
+    public bool endBox;
     //public GameObject cell;
     
     // Start is called before the first frame update
