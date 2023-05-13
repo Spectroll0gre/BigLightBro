@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3262949026116864525}
   - component: {fileID: 8543988799073231167}
-  - component: {fileID: 2283975500804399876}
   - component: {fileID: 2183972773227979010}
+  - component: {fileID: 6121110448452466092}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -86,34 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2283975500804399876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3649668322022208445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f465edf4518aae24e9dad09424fd3e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSprite: {fileID: 21300000, guid: 7dd06cf6452b13042801ffa37e01c847, type: 3}
-  darkSprite: {fileID: 21300000, guid: 204ab9aab62d35242888283f604cb54a, type: 3}
-  lightSwitchOnSprite: {fileID: 21300000, guid: d39d83b243967674497cdf22a33a2efc, type: 3}
-  lightSwitchOffSprite: {fileID: 21300000, guid: 9ed77f137e87ba949af0625013a54a24, type: 3}
-  dark: 0
-  lightSwitch: 0
-  switchOn: 0
-  charIsIn: 0
-  darkMode: 
-  affectedLights: []
-  sprites:
-  - {fileID: 21300000, guid: 7dd06cf6452b13042801ffa37e01c847, type: 3}
-  - {fileID: 21300000, guid: 204ab9aab62d35242888283f604cb54a, type: 3}
-  - {fileID: 21300000, guid: d39d83b243967674497cdf22a33a2efc, type: 3}
-  - {fileID: 21300000, guid: 9ed77f137e87ba949af0625013a54a24, type: 3}
-  cell: {fileID: 0}
 --- !u!61 &2183972773227979010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +112,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.49691963, y: 0.41596425}
   m_EdgeRadius: 0
+--- !u!114 &6121110448452466092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3649668322022208445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f465edf4518aae24e9dad09424fd3e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite: {fileID: 21300000, guid: 7dd06cf6452b13042801ffa37e01c847, type: 3}
+  darkSprite: {fileID: 21300000, guid: 204ab9aab62d35242888283f604cb54a, type: 3}
+  lightSwitchOnSprite: {fileID: 21300000, guid: d39d83b243967674497cdf22a33a2efc, type: 3}
+  lightSwitchOffSprite: {fileID: 21300000, guid: 9ed77f137e87ba949af0625013a54a24, type: 3}
+  dark: 0
+  lightSwitch: 0
+  switchOn: 0
+  affectedLights:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cell: {fileID: 0}

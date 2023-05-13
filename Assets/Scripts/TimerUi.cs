@@ -9,7 +9,7 @@ public class TimerUi : MonoBehaviour
 
     public TMP_Text TimerText;
     public int TimerINT = 5;
-    public int FuckUp = 1;
+    public int FuckUp;
     public bool dead;  //gameover state
     // Start is called before the first frame update
     void Start()
@@ -28,9 +28,14 @@ public class TimerUi : MonoBehaviour
         
     }
 
-    public void loseLife(int FuckUp)
+    public void LoseLife(int FuckUp)
     {
         TimerINT -= FuckUp;
+        UpdateTimerText();
+        /*if(TimerINT => 0)
+        {
+            losegame
+        }*/
         //take life int down 1 
     }
 }
