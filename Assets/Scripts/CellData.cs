@@ -19,9 +19,17 @@ public class CellData : MonoBehaviour
         {
             renderer.enabled = false;
         }
+
+        if(LightSwitch == true)
+        {
+            foreach (GameObject cell in affectedLights)
+            {
+                setBrightness();
+            }
+        }
     }
 
-    void OnCollisionEnter2d(Collider2D other)
+    /*void OnCollisionEnter2d(Collider2D other)
     {
         if(LightSwitch == true && SwitchOn == false)
         {
@@ -38,11 +46,12 @@ public class CellData : MonoBehaviour
             }
         }
 
-    }
+    }*/
 
     void setBrightness()
     {
-        SwitchOn = !SwitchOn;
+        dark = true;
+        
     }
 
     
