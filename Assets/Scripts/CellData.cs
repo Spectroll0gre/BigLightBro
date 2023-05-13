@@ -15,60 +15,58 @@ public class CellData : MonoBehaviour
 
 
     public bool dark = false;
-    public bool LightSwitch = false;
-    public bool SwitchOn =  false;
-    public bool CharIsIn = false;
+    public bool lightSwitch = false;
+    public bool switchOn =  false;
+    public bool charIsIn = false;
+    public string darkMode;
     public GameObject[] affectedLights;
     public Sprite[] sprites;
+    public GameObject cell;
+    //public GameObject cell;
     
     // Start is called before the first frame update
     void Start()
     {
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        if(dark == true)
-        {
-            renderer.enabled = false;
-        }
-
-        if(LightSwitch == true)
-        {
-            foreach (GameObject cell in affectedLights)
-            {
-                setBrightness();
-            }
-        }
-    }
-
-    /*void OnCollisionEnter2d(Collider2D other)
-    {
-        if(LightSwitch == true && SwitchOn == false)
-        {
-            foreach (GameObject cell in affectedLights)
-            {
-                setBrightness();
-            }
-        }
-        if(LightSwitch == true && SwitchOn == true)
-        {
-            foreach (GameObject cell in affectedLights)
-            {
-                setBrightness();
-            }
-        }
-
-    }*/
-
-    void setBrightness()
-    {
-        dark = true;
         
+        
+
+        /*if(lightSwitch == true)
+        {
+            foreach (GameObject cell in affectedLights)
+            {
+                setBrightness();
+            }
+        }*/
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("ouch");
+        if(lightSwitch == true && switchOn == false)
+        {
+            print("hello");
+            
+            foreach (GameObject cell in affectedLights)
+            {
+                cell.GetComponent<CellData>().dark = true;
+                //dark = true;
+                Debug.Log("I cant see!");
+            }
+        }
+        /*if(lightSwitch == true && switchOn == true)
+        {
+            foreach (GameObject cell in affectedLights)
+            {
+                setBrightness();
+            }
+        }*/
+
+    }
     
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 }
