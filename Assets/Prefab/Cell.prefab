@@ -263,7 +263,6 @@ GameObject:
   - component: {fileID: 3262949026116864525}
   - component: {fileID: 8543988799073231167}
   - component: {fileID: 2283975500804399876}
-  - component: {fileID: 1633725114896684860}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -331,7 +330,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dd06cf6452b13042801ffa37e01c847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -364,32 +363,6 @@ MonoBehaviour:
   CharIsIn: 0
   affectedLights: []
   sprites: []
---- !u!61 &1633725114896684860
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3649668322022208445}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.06425825, y: 0.043812394}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.46256727, y: 0.4800923}
-  m_EdgeRadius: 0
 --- !u!1 &5053847158308656351
 GameObject:
   m_ObjectHideFlags: 0
