@@ -31,11 +31,11 @@ public class CellData : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("ouch");
+        //Debug.Log("ouch");
         if(lightSwitch == true)
         {
             switchOn = !switchOn;
-            print("hello");
+            //print("hello");
             foreach (GameObject cell in affectedLights)
             {
                 

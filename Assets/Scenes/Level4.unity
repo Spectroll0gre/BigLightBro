@@ -390,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5845055871991833981, guid: 45f69d0cd51630c4a9fd2dc53c67ba67, type: 3}
       propertyPath: dark
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5882995994516353405, guid: 45f69d0cd51630c4a9fd2dc53c67ba67, type: 3}
       propertyPath: dark
