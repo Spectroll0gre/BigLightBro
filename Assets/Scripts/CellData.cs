@@ -22,37 +22,42 @@ public class CellData : MonoBehaviour
     public GameObject[] affectedLights;
     public Sprite[] sprites;
     public GameObject cell;
+    
+    private SpriteRenderer sR;
     //public GameObject cell;
     
     // Start is called before the first frame update
     void Start()
     {
-        
-        
-
-        /*if(lightSwitch == true)
-        {
-            foreach (GameObject cell in affectedLights)
-            {
-                setBrightness();
-            }
-        }*/
+        sR = GetComponent<SpriteRenderer>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("ouch");
-        if(lightSwitch == true && switchOn == false)
+        if(lightSwitch == true)
         {
+            switchOn = !switchOn;
             print("hello");
-            
             foreach (GameObject cell in affectedLights)
             {
-                cell.GetComponent<CellData>().dark = true;
+                
+                if(switchOn == true)
+                {
+                    cell.GetComponent<CellData>().dark = true;
+                    
+                }
+                else
+                {
+                    cell.GetComponent<CellData>().dark = false;
+                }
+                
+              
                 //dark = true;
                 Debug.Log("I cant see!");
             }
         }
+
         /*if(lightSwitch == true && switchOn == true)
         {
             foreach (GameObject cell in affectedLights)
@@ -61,12 +66,29 @@ public class CellData : MonoBehaviour
             }
         }*/
 
-    }
-    
+    }  
 
     // Update is called once per frame
     void Update()
     {
-       
+        if(dark == true)
+        {
+            sR.sprite = darkSprite;
+        }
+
+        if(dark == false)
+        {
+            sR.sprite = lightSprite;
+        }
+
+        if(lightSwitch == true && switchOn == false)
+        {
+            sR.sprite = lightSwitchOnSprite;  
+        }
+
+        if(lightSwitch == true && switchOn == true)
+        {
+            sR.sprite = lightSwitchOffSprite;  
+        }
     }
 }
