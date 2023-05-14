@@ -8,6 +8,7 @@ public class CellSoundEffect : MonoBehaviour
     public AudioClip switchOffFX;
     public AudioClip lightFX;
     public AudioClip darkFX;
+    public AudioClip HealtfFX;
     public AudioSource audioSource;
     public CellData cell;
 
@@ -19,7 +20,7 @@ public class CellSoundEffect : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) 
     {
         cell = this.gameObject.GetComponent<CellData>();
-        if (cell.dark) 
+        if (cell.dark && !cell.plus) 
         {
             audioSource.clip = darkFX;
         } else
@@ -34,6 +35,12 @@ public class CellSoundEffect : MonoBehaviour
         {
             audioSource.clip = switchOffFX;
         }
+        if(cell.plus)
+        {
+            audioSource.clip = HealtfFX;
+            cell.plus = false;
+        }
+
         audioSource.Play();
     }
 
