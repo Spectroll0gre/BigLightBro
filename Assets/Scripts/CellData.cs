@@ -42,6 +42,11 @@ public class CellData : MonoBehaviour
             print(FuckUp);
             timerUI.LoseLife(FuckUp);
         }
+        if(plus)
+        {
+            timerUI.GainLife(FuckUp);
+            //plus = false;
+        }
 
         /*if(lightSwitch == true && switchOn == true)
         {

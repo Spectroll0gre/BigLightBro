@@ -253,5 +253,6 @@ MonoBehaviour:
   switchOffFX: {fileID: 8300000, guid: 6da5dfd0151eec04fa1b57ad622d0030, type: 3}
   lightFX: {fileID: 8300000, guid: ae851c77e0ae5c648a1758f34defcb17, type: 3}
   darkFX: {fileID: 8300000, guid: 6c52f765777cc324e89f6262ebc9c278, type: 3}
+  HealtfFX: {fileID: 8300000, guid: 9de8047cef27da647b2079a276a6680f, type: 3}
   audioSource: {fileID: 8748106774055734216}
   cell: {fileID: 6121110448452466092}
