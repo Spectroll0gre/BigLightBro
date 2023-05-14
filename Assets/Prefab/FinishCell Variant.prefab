@@ -56,7 +56,15 @@ PrefabInstance:
       value: FinishCell Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6121110448452466092, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
+      propertyPath: dark
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121110448452466092, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
       propertyPath: darkSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83d9bd6489a702747b0330cd0183e680, type: 3}
+    - target: {fileID: 6121110448452466092, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
+      propertyPath: lightSprite
       value: 
       objectReference: {fileID: 21300000, guid: 83d9bd6489a702747b0330cd0183e680, type: 3}
     - target: {fileID: 6121110448452466092, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
