@@ -130,9 +130,11 @@ MonoBehaviour:
   darkSprite: {fileID: 21300000, guid: 204ab9aab62d35242888283f604cb54a, type: 3}
   lightSwitchOnSprite: {fileID: 21300000, guid: d39d83b243967674497cdf22a33a2efc, type: 3}
   lightSwitchOffSprite: {fileID: 21300000, guid: 9ed77f137e87ba949af0625013a54a24, type: 3}
+  plusSprite: {fileID: 21300000, guid: b3a4b95794dc5a74bb2a2224057fbce0, type: 3}
   dark: 0
   lightSwitch: 0
   switchOn: 0
+  plus: 0
   affectedLights:
   - {fileID: 0}
   - {fileID: 0}
@@ -251,5 +253,6 @@ MonoBehaviour:
   switchOffFX: {fileID: 8300000, guid: 6da5dfd0151eec04fa1b57ad622d0030, type: 3}
   lightFX: {fileID: 8300000, guid: ae851c77e0ae5c648a1758f34defcb17, type: 3}
   darkFX: {fileID: 8300000, guid: 6c52f765777cc324e89f6262ebc9c278, type: 3}
+  HealtfFX: {fileID: 8300000, guid: 9de8047cef27da647b2079a276a6680f, type: 3}
   audioSource: {fileID: 8748106774055734216}
   cell: {fileID: 6121110448452466092}

@@ -8,10 +8,12 @@ public class CellData : MonoBehaviour
     public Sprite lightSprite; 
     public Sprite darkSprite;
     public Sprite lightSwitchOnSprite;  
-    public Sprite lightSwitchOffSprite;  
+    public Sprite lightSwitchOffSprite; 
+    public Sprite plusSprite; 
     public bool dark = false;
     public bool lightSwitch = false;
     public bool switchOn =  false;
+    public bool plus = false;
     public CellData[] affectedLights;
     public TimerUi timerUI;
     private SpriteRenderer sR;
@@ -40,6 +42,11 @@ public class CellData : MonoBehaviour
             print(FuckUp);
             timerUI.LoseLife(FuckUp);
         }
+        if(plus)
+        {
+            timerUI.GainLife(FuckUp);
+            //plus = false;
+        }
 
         /*if(lightSwitch == true && switchOn == true)
         {
@@ -67,6 +74,11 @@ public class CellData : MonoBehaviour
         if(lightSwitch == true && switchOn == true)
         {
             sR.sprite = lightSwitchOffSprite;  
+        }
+
+        if(plus == true)
+        {
+            sR.sprite = plusSprite;
         }
     }
 

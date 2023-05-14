@@ -43,6 +43,11 @@ public class TimerUi : MonoBehaviour
             StartCoroutine(WaitForSFX());    
         }    
     }
+    public void GainLife(int FuckUp)
+    {
+        TimerINT += FuckUp;
+        UpdateTimerText();
+    }
     IEnumerator WaitForSFX()
     {
         audioSource.clip = loseFX;
