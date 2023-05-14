@@ -45,9 +45,24 @@ EditorBuildSettings:
     path: Assets/Scenes/6CellLevel.unity
     guid: ec027d1b3737c8b4d80de3dcb02b69e0
   - enabled: 1
+    path: Assets/Scenes/three_nuts_no_Mouth.unity
+    guid: 5ecd04292211bdc42850f91cd9655b13
+  - enabled: 1
     path: Assets/Scenes/HealthLevel1.unity
     guid: b4b2af6aabc12a1488d4ee6582f5ee50
   - enabled: 1
     path: Assets/Scenes/HealthLevel2.unity
     guid: e1846c65d9c107b439fac29ffaed4609
+  - enabled: 1
+    path: Assets/Scenes/Health1.unity
+    guid: 71415290efe6fc34c852a6f04d72ab3a
+  - enabled: 1
+    path: Assets/Scenes/Final_Alex.unity
+    guid: f8069a08ec3eb9349b8fe9ea57fdfdf5
+  - enabled: 1
+    path: Assets/Scenes/BigMOde.unity
+    guid: a8f9781026190af4c8d56e6a577c1e7d
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 4f19976b05059f0449abc3cdea80bc3c
   m_configObjects: {}
