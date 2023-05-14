@@ -20,7 +20,7 @@ public class TimerUi : MonoBehaviour
 
     public void UpdateTimerText()
     {
-        TimerText.text = "FireWalls: " + TimerINT.ToString();
+        TimerText.text = TimerINT.ToString();
     }
     // Update is called once per frame
     void Update()
