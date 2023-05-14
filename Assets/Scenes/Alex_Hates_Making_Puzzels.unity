@@ -566,6 +566,10 @@ PrefabInstance:
       propertyPath: lightSwitch
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6250692039457631355, guid: 482b2e02fa1c354468a920ea01eb6cb3, type: 3}
+      propertyPath: nextLevel
+      value: 6CellLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 6441394053200551921, guid: 482b2e02fa1c354468a920ea01eb6cb3, type: 3}
       propertyPath: dark
       value: 1

@@ -39,6 +39,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Alex_Switch_4.unity
     guid: 4d48a785134465041973071396535d07
   - enabled: 1
+    path: Assets/Scenes/Alex_Hates_Making_Puzzels.unity
+    guid: 27306f655e7aad2469c419bc2cf7dde3
+  - enabled: 1
     path: Assets/Scenes/6CellLevel.unity
     guid: ec027d1b3737c8b4d80de3dcb02b69e0
+  - enabled: 1
+    path: Assets/Scenes/HealthLevel1.unity
+    guid: b4b2af6aabc12a1488d4ee6582f5ee50
+  - enabled: 1
+    path: Assets/Scenes/HealthLevel2.unity
+    guid: e1846c65d9c107b439fac29ffaed4609
   m_configObjects: {}
