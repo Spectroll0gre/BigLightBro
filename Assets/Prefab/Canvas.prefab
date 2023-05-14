@@ -387,7 +387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 0}
+  m_AnchoredPosition: {x: -350, y: 30}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &253746284380072917
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "(Use WASD to move\n \n(Make it to the flag "
+  m_text: "<Use WASD to move\n \n<Make it to the flag \n\n<Press ESC to quit"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0a4e1eb4446ae7e479d15a0a2c0127d1, type: 2}
   m_sharedMaterial: {fileID: 7508090098836372151, guid: 0a4e1eb4446ae7e479d15a0a2c0127d1, type: 2}
