@@ -12,13 +12,10 @@ public class CellData : MonoBehaviour
     public bool dark = false;
     public bool lightSwitch = false;
     public bool switchOn =  false;
-    public GameObject[] affectedLights;
-    public GameObject cell;
+    public CellData[] affectedLights;
     public TimerUi timerUI;
     private SpriteRenderer sR;
     public int FuckUp = 1;
-    public bool startBox;
-    public bool endBox;
     //public GameObject cell;
     
     // Start is called before the first frame update
@@ -31,29 +28,14 @@ public class CellData : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("ouch");
+        Debug.Log("ouch");
         if(lightSwitch == true)
         {
             switchOn = !switchOn;
-            //print("hello");
-            foreach (GameObject cell in affectedLights)
-            {
-                
-                if(switchOn == true)
-                {
-                    cell.GetComponent<CellData>().dark = true;
-                }
-                else
-                {
-                    cell.GetComponent<CellData>().dark = false;
-                }
-                
-              
-                //dark = true;
-                Debug.Log("I cant see!");
-            }
+            print("hello");
+            LightFlip();
         }
-        if(dark == false)
+        if(!dark)
         {
             print(FuckUp);
             timerUI.LoseLife(FuckUp);
@@ -72,24 +54,43 @@ public class CellData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(lightSwitch && !switchOn)
+        DarkChange();
+
+        
+
+        if (lightSwitch == true && switchOn == false)
         {
+            print(lightSwitch);
             sR.sprite = lightSwitchOnSprite;  
         }
 
-        else if(lightSwitch && switchOn)
+        if(lightSwitch == true && switchOn == true)
         {
             sR.sprite = lightSwitchOffSprite;  
         }
-        else if(dark)
+    }
+
+    public void LightFlip()
+    {
+        foreach (CellData cell in affectedLights)
+        {
+            cell.dark = !cell.dark;
+            DarkChange();
+        }
+    }   
+    
+    public void DarkChange()
+    {
+        if (dark == true)
         {
             sR.sprite = darkSprite;
         }
-        else if(!dark)
+
+        if (dark == false)
         {
             sR.sprite = lightSprite;
         }
-
-        
+        //dark = true;
+        //Debug.Log("I cant see!");
     }
 }
