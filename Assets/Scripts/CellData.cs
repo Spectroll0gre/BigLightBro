@@ -12,8 +12,7 @@ public class CellData : MonoBehaviour
     public bool dark = false;
     public bool lightSwitch = false;
     public bool switchOn =  false;
-    public GameObject[] affectedLights;
-    public GameObject cell;
+    public CellData[] affectedLights;
     public TimerUi timerUI;
     private SpriteRenderer sR;
     public int FuckUp = 1;
@@ -34,24 +33,9 @@ public class CellData : MonoBehaviour
         {
             switchOn = !switchOn;
             print("hello");
-            foreach (GameObject cell in affectedLights)
-            {
-                
-                if(switchOn == true)
-                {
-                    cell.GetComponent<CellData>().dark = true;
-                }
-                else
-                {
-                    cell.GetComponent<CellData>().dark = false;
-                }
-                
-              
-                //dark = true;
-                Debug.Log("I cant see!");
-            }
+            LightFlip();
         }
-        if(dark == false)
+        if(!dark)
         {
             print(FuckUp);
             timerUI.LoseLife(FuckUp);
@@ -70,18 +54,13 @@ public class CellData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dark == true)
-        {
-            sR.sprite = darkSprite;
-        }
+        DarkChange();
 
-        if(dark == false)
-        {
-            sR.sprite = lightSprite;
-        }
+        
 
-        if(lightSwitch == true && switchOn == false)
+        if (lightSwitch == true && switchOn == false)
         {
+            print(lightSwitch);
             sR.sprite = lightSwitchOnSprite;  
         }
 
@@ -89,5 +68,29 @@ public class CellData : MonoBehaviour
         {
             sR.sprite = lightSwitchOffSprite;  
         }
+    }
+
+    public void LightFlip()
+    {
+        foreach (CellData cell in affectedLights)
+        {
+            cell.dark = !cell.dark;
+            DarkChange();
+        }
+    }   
+    
+    public void DarkChange()
+    {
+        if (dark == true)
+        {
+            sR.sprite = darkSprite;
+        }
+
+        if (dark == false)
+        {
+            sR.sprite = lightSprite;
+        }
+        //dark = true;
+        //Debug.Log("I cant see!");
     }
 }
