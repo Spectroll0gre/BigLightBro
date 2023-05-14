@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimerUi : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class TimerUi : MonoBehaviour
     public TMP_Text TimerText;
     public int TimerINT = 5;
     public int FuckUp;
-    public bool dead;  //gameover state
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +33,16 @@ public class TimerUi : MonoBehaviour
     {
         TimerINT -= FuckUp;
         UpdateTimerText();
-        /*if(TimerINT => 0)
-        {
-            losegame
-        }*/
-        //take life int down 1 
+
+
+        if(TimerINT <= 0)
+        {       
+            ResetScene();
+        }    
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
