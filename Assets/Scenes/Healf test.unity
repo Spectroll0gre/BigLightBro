@@ -1613,6 +1613,10 @@ PrefabInstance:
       propertyPath: dark
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6121110448452466092, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
+      propertyPath: plus
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
 --- !u!4 &705882640087624154
