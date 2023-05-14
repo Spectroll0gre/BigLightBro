@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 83d9bd6489a702747b0330cd0183e680, type: 3}
+    - target: {fileID: 8748106774055734216, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 601075dc5573f6a47a18b0ec94776752, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
 --- !u!1 &3188640011353264023 stripped
@@ -95,3 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: 
+  winFx: {fileID: 8300000, guid: 601075dc5573f6a47a18b0ec94776752, type: 3}
+  audioSource: {fileID: 7458504074152507362}
+--- !u!82 &7458504074152507362 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8748106774055734216, guid: 4be214b5d6f4a974582f3d975b3bbf72, type: 3}
+  m_PrefabInstance: {fileID: 2226582732260916266}
+  m_PrefabAsset: {fileID: 0}

@@ -11,12 +11,15 @@ public class TimerUi : MonoBehaviour
     public TMP_Text TimerText;
     public int TimerINT = 5;
     public int FuckUp;
+    public AudioClip loseFX;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         //Setting the initial Timer
-       UpdateTimerText(); 
+        audioSource = GetComponent<AudioSource>();
+        UpdateTimerText(); 
     }
 
     public void UpdateTimerText()
@@ -36,9 +39,16 @@ public class TimerUi : MonoBehaviour
 
 
         if(TimerINT <= 0)
-        {       
-            ResetScene();
+        {   
+            StartCoroutine(WaitForSFX());    
         }    
+    }
+    IEnumerator WaitForSFX()
+    {
+        audioSource.clip = loseFX;
+        audioSource.Play();
+        yield return new WaitForSeconds(0.3f);
+        ResetScene();
     }
 
     public void ResetScene()

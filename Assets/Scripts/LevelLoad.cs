@@ -5,13 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoad : MonoBehaviour
 {
-   public string nextLevel;
+    public string nextLevel;
+    public AudioClip winFx;
+    public AudioSource audioSource;
 
-   private void OnTriggerEnter2D(Collider2D collision)
-   {
+    void Start() 
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {        
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nextLevel);
+            StartCoroutine(WaitForSFX());
         }
-   }
+    }
+
+    IEnumerator WaitForSFX()
+    {
+        audioSource.clip = winFx;
+        audioSource.Play();
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene(nextLevel);
+    }
 }
